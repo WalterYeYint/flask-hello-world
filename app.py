@@ -5,6 +5,10 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello, World!'
 
+@app.route('/test')
+def hello_world_2():
+    return 'Testing!'
+
 @app.route('/api/data', methods=['GET'])
 def get_data():
     data = {"message": "Hello from Python!"}
